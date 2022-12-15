@@ -35,13 +35,10 @@ int main(int ac, char** av)
 		{
 			while (std::getline(in_file, str_rep))
 			{
-				if (!str_rep.empty())
-				{
-					ft_replace(str_rep , av[2], av[3]);
-					out_file << str_rep;
-				}
+				ft_replace(str_rep , av[2], av[3]);
+				out_file << str_rep;
 				if (!in_file.eof())
-					out_file.close();
+					out_file << "\n";
 			}
 		}
 		out_file.close();

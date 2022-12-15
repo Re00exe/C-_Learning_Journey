@@ -1,6 +1,7 @@
 #include "Zombie.hpp"
 
-int main(void){
+int main(void)
+{
     Zombie *zomb;
 
 	zomb = newZombie("zombiyyyyyy");
@@ -8,5 +9,4 @@ int main(void){
 	randomChump("reogine");
 	delete zomb;
 	return 0;
-
 }
