@@ -10,9 +10,9 @@ void	Zombie::name_Zomb(std::string name)
 	this->name = name;
 }
 
-std::string	Zombie::get_name(Zombie zomb)
+std::string	Zombie::get_name()
 {
-	return (zomb.name);
+	return (name);
 }
 
 Zombie::~Zombie(void)

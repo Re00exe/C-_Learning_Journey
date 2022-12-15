@@ -2,19 +2,18 @@
 #include<iomanip>
 #include<fstream>
 
-int	ft_replace(std::string &str, std::string to_rep, std::string rep)
+void	ft_replace(std::string &str, std::string to_rep, std::string rep)
 {
 	std::size_t	pos;
 
 	pos = str.find(to_rep);
-	if (pos!=std::string::npos)
+	while (pos!=std::string::npos)
 	{
-		
 		str.erase(pos, to_rep.size());
 		str.insert(pos, rep);
-		return(1);
+		pos += rep.length();
+		pos = str.find(to_rep, pos);
 	}
-	return(0);
 }
 
 int main(int ac, char** av)
@@ -22,7 +21,6 @@ int main(int ac, char** av)
 	std::fstream	out_file;
 	std::fstream	in_file;
 	std::string		str_rep;	
-	int		n=0;
 
 	if (ac == 4)
 	{
@@ -39,14 +37,12 @@ int main(int ac, char** av)
 			{
 				if (!str_rep.empty())
 				{
-					n += ft_replace(str_rep , av[2], av[3]);
+					ft_replace(str_rep , av[2], av[3]);
 					out_file << str_rep;
 				}
 				if (!in_file.eof())
-					out_file << std::endl;
+					out_file.close();
 			}
-			if (!n)
-				std::cout << "#No match of " << av[2] << " in your file" << std::endl;
 		}
 		out_file.close();
 	}

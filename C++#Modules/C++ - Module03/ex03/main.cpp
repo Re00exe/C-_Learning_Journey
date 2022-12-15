@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	ScavTrap player1("GAREN");
+	FragTrap player1("GAREN");
 	DiamondTrap player2("Darius");
 
 	player2.whoAmI();
@@ -11,6 +11,6 @@ int main(void)
 	player2.attack("GAREN");
 	player1.takeDamage(10);
 	player2.guardGate();
-	
+
 	return (0);
 }

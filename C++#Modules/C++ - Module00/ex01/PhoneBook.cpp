@@ -21,6 +21,11 @@ void PhoneBook::PhoneBook_Search()
 		}
 		std::cout << "/> Index of the entry to display: ";
 		std::cin >> num;
+		if (std::cin.eof())
+		{
+			std::cerr << "EOF when reading the index !!!" << std::endl;
+			return ;
+		}
 		std::cin.ignore(1024, '\n');
 		if (std::cin.fail())
 		{
