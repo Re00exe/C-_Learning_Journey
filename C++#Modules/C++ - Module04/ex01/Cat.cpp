@@ -21,6 +21,7 @@ Cat::Cat (const Cat &_cat)
 
 /*-----------------------------------------------------*/
 Cat::~Cat (){
+	delete _my_brain;
 	std::cout << "Cat has been Destructed" << std::endl;
 }
 

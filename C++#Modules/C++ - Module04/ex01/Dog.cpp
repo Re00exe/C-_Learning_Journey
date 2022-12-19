@@ -19,6 +19,7 @@ Dog::Dog (const Dog &_dog){
 
 /*-----------------------------------------------------*/
 Dog::~Dog (){
+	delete _my_brain;
 	std::cout << "Dog has been Destructed" << std::endl;
 }
 
@@ -38,3 +39,4 @@ void	Dog::makeSound(void) const
 {
 	std::cout << "WooF  WooF !!!" << std::endl;
 }
+
