@@ -21,8 +21,6 @@ int main()
 		animal_arr[i] = new Cat();
 	}
 
-	animal_arr[0]->
-
 	for (int i=0; i<num ; i++)
 	 	delete  animal_arr[i];	
 	return 0;
