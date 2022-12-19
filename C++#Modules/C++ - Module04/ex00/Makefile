@@ -21,9 +21,6 @@ all: $(NAME)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) -c $< -o $@
 	@echo "$< ==> $@"
 
-clean:
-	@rm -f $(OBJS)
-
 fclean: clean
 	@rm -f $(NAME)
 	clear

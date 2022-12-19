@@ -11,17 +11,23 @@ int main()
 	// delete j;
 	// delete i;
 
-	int num = 2;
-	Animal **animal_arr = new Animal*[num];
+	// int num = 2;
+	// Animal **animal_arr = new Animal*[num];
 
-	for (int i=0; i < num; i++)
+	// for (int i=0; i < num; i++)
+	// {
+	// 	animal_arr[i] = new Dog();
+	// 	i++;
+	// 	animal_arr[i] = new Cat();
+	// }
+
+	// for (int i=0; i<num ; i++)
+	//  	delete  animal_arr[i];	
+	// return 0;
+
+	Dog basic;
 	{
-		animal_arr[i] = new Dog();
-		i++;
-		animal_arr[i] = new Cat();
+		Dog tmp(basic);
 	}
-
-	for (int i=0; i<num ; i++)
-	 	delete  animal_arr[i];	
-	return 0;
+		std::cout << basic.getBrain()[0] << std::endl;
 }

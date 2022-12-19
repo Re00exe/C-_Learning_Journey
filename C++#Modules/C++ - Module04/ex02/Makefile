@@ -6,10 +6,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = Brain
+NAME = Abs_Animal
 
 
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+SRCS = main.cpp A_Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) $(SRCS) -o $(NAME)

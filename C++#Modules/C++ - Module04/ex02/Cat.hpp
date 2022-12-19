@@ -1,9 +1,9 @@
 #ifndef __CAT_H__
 #define __CAT_H__
-#include "Animal.hpp"
+#include "A_Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public A_Animal
 {
 	private:
 		Brain	*_my_brain;
@@ -12,8 +12,10 @@ class Cat : public Animal
 	    Cat (const Cat &a);
 		~Cat ();
 	    Cat & operator = (const Cat &a);
-		virtual	void	makeSound(void) const;
 		const std::string	*getBrain(void) const;
+		virtual	void	makeSound(void) const;
+		virtual std::string	getType(void) const;
+
 };
 
 #endif

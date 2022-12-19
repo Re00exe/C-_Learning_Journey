@@ -34,13 +34,17 @@ Dog & Dog::operator= (const Dog &_dog){
 	return (*this);
 }
 
+const std::string	*Dog::getBrain(void) const
+{
+	return (_my_brain->getIdeas());
+}
 
 void	Dog::makeSound(void) const
 {
 	std::cout << "WooF  WooF !!!" << std::endl;
 }
 
-const std::string	*Dog::getBrain(void) const
+std::string	Dog::getType(void) const
 {
-	return (_my_brain->getIdeas());
+	return (this->type);
 }
