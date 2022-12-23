@@ -16,10 +16,7 @@ $(NAME): $(SRCS)
 
 all: $(NAME)
 
-clean:
-	@rm -f $(OBJS)
-
-fclean: clean
+fclean:
 	@rm -f $(NAME)
 	clear
 

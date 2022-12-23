@@ -1,4 +1,4 @@
-.PHONY: all clean fclean re
+.PHONY: all fclean re
 
 CC = c++
 
@@ -6,9 +6,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = fixed0.1
+NAME = bureaucrat
 
-SRCS = main.cpp Fixed.cpp
+
+SRCS = main.cpp Bureaucrat.cpp
+
+HEADERS = Bureaucrat.hpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) $(SRCS) -o $(NAME)
@@ -16,7 +19,7 @@ $(NAME): $(SRCS)
 
 all: $(NAME)
 
-fclean: clean
+fclean:
 	@rm -f $(NAME)
 	clear
 
