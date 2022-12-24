@@ -1,23 +1,34 @@
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-	Bureaucrat	Ekko("Ekko", 1);
-	Form		paper("WhitePaper", 2, 1);	
-	//std::cout << paper << std::endl;
-	try {
-		std::cout << Ekko << std::endl;
-		Ekko.signForm(paper);
-		Ekko.ReGrade();
-	//	Ekko.DeGrade();
-		Ekko.signForm(paper);
+	{
+		Bureaucrat ekko("Ekko", 24);
+		PresidentialPardonForm paper("BlackPaper");
+		
+		ekko.signForm(paper);
+		paper.execute(ekko);
 	}
-	catch(const std::exception& exc) {
-		std::cerr << exc.what() << std::endl;
-	}
-
-	std::cout << Ekko << std::endl;
+	// std::cout << std::endl;
+	// {
+	// 	Bureaucrat Master_Yi("Master_Yi", 75);
+	// 	ShrubberyCreationForm paper("RedPaper");
+		
+	// 	Master_Yi.signForm(paper);
+	// 	paper.execute(Master_Yi);	
+	// }
+	// std::cout << std::endl;
+	// {
+	// 	Bureaucrat Akali("Akali", 44);
+	// 	RobotomyRequestForm paper("GreenPaper");
+		
+	// 	Akali.signForm(paper);
+	// 	paper.execute(Akali);	
+	// }
 	
 	return (0);
 }

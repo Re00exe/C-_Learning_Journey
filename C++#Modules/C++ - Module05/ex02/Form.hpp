@@ -33,8 +33,9 @@ public:
 	{
 		virtual const	char * what() const throw();
 	};
-	
-	virtual void execute(Bureaucrat const & executor) const =0;
+	void	execute(Bureaucrat const & executor) const;
+
+	virtual void Action() const =0;
 };
 
 std::ostream& operator<<(std::ostream& out, Form&_obj);

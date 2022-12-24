@@ -71,3 +71,26 @@ std::ostream& operator<<(std::ostream& out, Form&_obj){
 
 	return (out);
 }
+
+void Form::execute(Bureaucrat const & executor) const
+{
+	try
+	{
+		if (!_signature)
+			throw (std::string("Form is not Signed"));
+		if (executor.getGrade() > _grad_to_exe)
+			throw GradeTooLowException();
+	}
+	catch(const std::exception& exc)
+	{
+		std::cerr << exc.what() << std::endl;
+		return ;
+	}
+	catch(const std::string& msg)
+	{
+		std::cerr << msg << std::endl;
+		return ;
+	}
+	Action();
+	std::cout << executor.getName() << " Executed Sucssefully " << getName() << std::endl;
+}

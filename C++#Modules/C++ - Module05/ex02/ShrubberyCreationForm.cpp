@@ -29,15 +29,38 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 	return (*this);
 }
 
-void ShrubberyCreationForm::SAction(std::string _target)
+std::string ShrubberyCreationForm::getTarget(void) const{
+	return (this->_target);
+}
+
+void ShrubberyCreationForm::Action() const
 {
 	std::fstream	_out_file;
 
-	_out_file.open(_target += "", std::ios::out | std::ios::ate);
-}
-
-void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
-{
-	if (executor.getGrade() < this->Form::getGradeToExe())
-				S_Action(_target);
+	_out_file.open(getTarget() += "_shrubbery", std::ios::out | std::ios::ate);
+	_out_file <<" \
+	\n                  ___\
+	\n            _,-'**   ****`--.\
+    \n         ,-'          __,,-- \
+    \n       ,'    __,--****dF      )\
+    \n      /   .-*Hb_,--**dF      /\
+    \n    ,'       _Hb ___dF*-._,-'\
+    \n  ,'      _,-****   **--..__\
+    \n (     ,-'                  `.\
+    \n  `._,'     _   _             ;\
+    \n   ,'     ,' `-'Hb-.___..._,-'\
+    \n        ,'*Hb.-'HH`-.dHF*\
+    \n    `--'   *Hb  HH  dF*\
+    \n            *Hb HH dF\
+    \n             *HbHHdF\
+    \n              |HHHF\
+    \n              |HHH|\
+    \n              |HHH|\
+    \n              |HHH|\
+    \n              |HHH|\
+    \n              dHHHb\
+    \n            .dFd|bHb.\
+    \n  o       .dHFdH|HbTHb.\
+	\n Y  |  __,dHHFdHH|HHhoHHb.\
+	*" << std::endl;
 }
