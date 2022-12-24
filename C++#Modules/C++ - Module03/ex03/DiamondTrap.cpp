@@ -10,7 +10,7 @@ DiamondTrap::DiamondTrap (std::string _name){
 
 	DiamondTrap::name = _name;
 	ClapTrap::name = _name + "_clap_name";
-	health = 100;
+	hit_pts = 100;
 	energy = 50;
 	damage = 30;
 
@@ -21,7 +21,7 @@ DiamondTrap::DiamondTrap (std::string _name){
 DiamondTrap::DiamondTrap (const DiamondTrap &player){
 
 	ClapTrap::name = player.ClapTrap::name;
-	health = player.health;
+	hit_pts = player.hit_pts;
 	energy = player.energy;
 	damage = player.damage;
 
@@ -37,7 +37,7 @@ DiamondTrap::~DiamondTrap (){
 DiamondTrap & DiamondTrap::operator = (const DiamondTrap &player){
 
     ClapTrap::name = player.ClapTrap::name;
-	health = player.health;
+	hit_pts = player.hit_pts;
 	energy = player.energy;
 	damage = player.damage;
 

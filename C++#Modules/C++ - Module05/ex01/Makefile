@@ -1,4 +1,4 @@
-.PHONY: all  fclean re
+.PHONY: all fclean re
 
 CC = c++
 
@@ -6,10 +6,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = ClapTrap0.2
+NAME = Bureaucrat0.1
 
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp DiamondTrap.cpp FragTrap.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) $(SRCS) -o $(NAME)

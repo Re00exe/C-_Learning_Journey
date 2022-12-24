@@ -13,6 +13,6 @@ int main(void)
 	player1.takeDamage(10);
 	player1.beRepaired(10);
 	player2.guardGate();
-	player1.attack("Tristana");
+
 	return (0);
 }

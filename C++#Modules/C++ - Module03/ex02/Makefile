@@ -1,4 +1,4 @@
-.PHONY: all clean fclean re
+.PHONY: all fclean re
 
 CC = c++
 
@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = ClapTrap0.1
+NAME = ClapTrap0.2
 
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
@@ -17,14 +17,7 @@ $(NAME): $(SRCS)
 
 all: $(NAME)
 
-%.o:%.cpp $(SRCS) $(HEADERS)
-	@$(CC) $(CFLAGS) $(CPP_VERSION) -c $< -o $@
-	@echo "$< ==> $@"
-
-clean:
-	@rm -f $(OBJS)
-
-fclean: clean
+fclean:
 	@rm -f $(NAME)
 	clear
 

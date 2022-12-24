@@ -5,8 +5,8 @@ ClapTrap::ClapTrap(){
 	std::cout << "[ClapTrap]: Default Constructor has been called" << std::endl;
 }
 
-ClapTrap::ClapTrap (std::string _name, int _health, int _energy,int _damage)
-: name(_name), health(_health), energy(_energy), damage(_damage)
+ClapTrap::ClapTrap (std::string _name, int _hit_pts, int _energy,int _damage)
+: name(_name), hit_pts(_hit_pts), energy(_energy), damage(_damage)
 {
 	std::cout << "[ClapTrap]: "<< name <<" has been  Constructed " << std::endl;
 }
@@ -14,7 +14,7 @@ ClapTrap::ClapTrap (std::string _name, int _health, int _energy,int _damage)
 /*--------------------------------------------------------*/
 ClapTrap::ClapTrap (const ClapTrap &cpy_player){
     name = cpy_player.name;
-	health = cpy_player.health;
+	hit_pts = cpy_player.hit_pts;
 	energy = cpy_player.energy;
 	damage = cpy_player.damage;
 
@@ -30,7 +30,7 @@ ClapTrap::~ClapTrap (){
 /*--------------------------------------------------------*/
 ClapTrap & ClapTrap::operator = (const ClapTrap &player){
     name = player.name;
-	health = player.health;
+	hit_pts = player.hit_pts;
 	energy = player.energy;
 	damage = player.damage;
 
@@ -40,7 +40,7 @@ ClapTrap & ClapTrap::operator = (const ClapTrap &player){
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->energy && this->health)
+	if (this->energy && this->hit_pts)
 	{
 		std::cout << "[ClapTrap]: " << this->name << " attacks " << target <<  ", causing "
 		<< this->damage << " points of damage!"<< std::endl;
@@ -48,27 +48,27 @@ void	ClapTrap::attack(const std::string& target)
 	}
 	else if (!(this->energy))
 		std::cout << "#[ClapTrap]: Not enough energy pts"<< std::endl;
-	if (!(this->health))
+	if (!(this->hit_pts))
 		std::cout << "#[ClapTrap]: Not enough hit pts to attack " << target << std::endl;
 
 }
 
  void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if  (this->health)
-		health -= amount;
-	if (this->health <= 0)
+	if  (this->hit_pts)
+		hit_pts -= amount;
+	if (this->hit_pts <= 0)
 	{
 		std::cout << "#[ClapTrap]: "<< this->name << " Wasted..." << std::endl; 
-		health = 0;
+		hit_pts = 0;
 	}
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energy)
 	{
-		this->health += amount;
-		std::cout << "[ClapTrap]: " << this->name << " has been repaired [health:" << this->health << "] " << std::endl;
+		this->hit_pts += amount;
+		std::cout << "[ClapTrap]: " << this->name << " has been repaired [hit_pts:" << this->hit_pts << "] " << std::endl;
 		this->energy--;
 	}
 	else

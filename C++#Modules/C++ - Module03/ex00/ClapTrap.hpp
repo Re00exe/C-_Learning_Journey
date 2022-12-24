@@ -5,14 +5,14 @@
 class ClapTrap{
 private:
 		std::string	name;
-		int	health;
+		int	hit_pts;
 		int	energy;
 		int	damage;
 
 public:
 	ClapTrap();
 	~ClapTrap();
-	ClapTrap(std::string _name, int _health=10, int _energy=10,int _damage=10);
+	ClapTrap(std::string _name, int _hit_pts=10, int _energy=10,int _damage=10);
 	ClapTrap(const ClapTrap &cpy_player);
 	ClapTrap	&operator=(const ClapTrap &player);
 	void	attack(const std::string& target);

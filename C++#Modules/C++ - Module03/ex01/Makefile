@@ -1,4 +1,4 @@
-.PHONY: all clean fclean re
+.PHONY: all  fclean re
 
 CC = c++
 
@@ -17,14 +17,7 @@ $(NAME): $(SRCS)
 
 all: $(NAME)
 
-%.o:%.cpp $(SRCS) $(HEADERS)
-	@$(CC) $(CFLAGS) $(CPP_VERSION) -c $< -o $@
-	@echo "$< ==> $@"
-
-clean:
-	@rm -f $(OBJS)
-
-fclean: clean
+fclean:
 	@rm -f $(NAME)
 	clear
 

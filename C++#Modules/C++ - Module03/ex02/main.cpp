@@ -10,7 +10,7 @@ int main(void)
 
 	player1.attack("Tristana");
 	player2.takeDamage(10);
-	player2.attack("GAREN");
+	player3.attack("GAREN");
 	player1.takeDamage(10);
 	player2.guardGate();
 	player3.highFivesGuys();

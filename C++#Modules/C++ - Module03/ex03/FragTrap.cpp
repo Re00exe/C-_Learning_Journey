@@ -7,7 +7,7 @@ FragTrap::FragTrap (){
 
 FragTrap::FragTrap (std::string _name):ClapTrap(_name)
 {
-	health = 100;
+	hit_pts = 100;
 	energy = 100;
 	damage = 30;
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap (std::string _name):ClapTrap(_name)
 FragTrap::FragTrap (const FragTrap &player){
 
 	name = player.name;
-	health = player.health;
+	hit_pts = player.hit_pts;
 	energy = player.energy;
 	damage = player.damage;
 
@@ -33,7 +33,7 @@ FragTrap::~FragTrap (){
 FragTrap & FragTrap::operator = (const FragTrap &player){
 
     name = player.name;
-	health = player.health;
+	hit_pts = player.hit_pts;
 	energy = player.energy;
 	damage = player.damage;
 

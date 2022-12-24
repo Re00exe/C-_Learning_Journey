@@ -48,12 +48,12 @@ std::string	Bureaucrat::getName(void) const
 
 const	char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("#Grade Too Low !!!");
+	return ("#Bureaucrat: Grade Too Low !!!");
 }
 
 const	char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("#Grade Too High !!!");
+	return ("#Bureaucrat: Grade Too High !!!");
 }
 
 std::ostream& operator<<(std::ostream& out, Bureaucrat&_obj){
@@ -73,4 +73,13 @@ void	Bureaucrat::DeGrade(void)
 	if (grade == 150)
 		throw Bureaucrat::GradeTooLowException();
 	grade++;
+}
+
+void	Bureaucrat::signForm(Form &_form)
+{
+	if (getGrade() <= _form.getGradeToSign())
+		std :: cout << getName() << " Signed " << _form.getName() << std::endl; 
+	else
+		std::cout << getName() << " couldn't sign " << _form.getName() <<
+		" because " << getGrade() << " is Lower then "<< _form.getGradeToSign() << std::endl;
 }
