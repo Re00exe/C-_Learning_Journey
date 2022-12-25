@@ -26,7 +26,7 @@ Form::~Form (){
 
 /*-----------------------------------------------------*/
 Form & Form::operator= (const Form &form){
-	(void)form;
+	_signature = form._signature;
 	return (*this);
 }
 

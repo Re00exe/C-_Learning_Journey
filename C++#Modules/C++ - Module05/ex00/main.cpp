@@ -3,8 +3,8 @@
 
 int main()
 {
-	Bureaucrat	Yaaso("Yaaso", 1);
 	try {
+	Bureaucrat	Yaaso("Yaaso", 1);
 	
 		std::cout << Yaaso << std::endl;
 	//	Yaaso.ReGrade();
@@ -14,7 +14,7 @@ int main()
 		std::cerr << exc.what() << std::endl;
 	}
 
-	std::cout << Yaaso << std::endl;
+	//std::cout << Yaaso << std::endl;
 	
 	return (0);
 }

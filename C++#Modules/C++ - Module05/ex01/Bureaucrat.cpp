@@ -27,7 +27,7 @@ Bureaucrat::~Bureaucrat (){
 
 /*--------------------------------------------------------*/
 Bureaucrat & Bureaucrat::operator = (Bureaucrat &_bureaucrat){
-	(void)_bureaucrat;
+	grade = _bureaucrat.grade;
 	return (*this);
 }
 
