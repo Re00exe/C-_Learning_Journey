@@ -3,21 +3,21 @@
 
 int main()
 {
-	Bureaucrat	Ekko("Ekko", 1);
-	Form		paper("WhitePaper", 2, 1);	
-	//std::cout << paper << std::endl;
+	Bureaucrat	Ekko("Ekko", 2);
+	Form		paper("WhitePaper", 1, 1);	
+	std::cout << paper << std::endl;
 	try {
 		std::cout << Ekko << std::endl;
-		Ekko.signForm(paper);
 		Ekko.ReGrade();
-	//	Ekko.DeGrade();
+		Ekko.signForm(paper);
+		Ekko.DeGrade();
 		Ekko.signForm(paper);
 	}
 	catch(const std::exception& exc) {
 		std::cerr << exc.what() << std::endl;
 	}
 
-	std::cout << Ekko << std::endl;
+	//std::cout << Ekko << std::endl;
 	
 	return (0);
 }

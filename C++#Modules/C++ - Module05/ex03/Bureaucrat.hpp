@@ -24,6 +24,7 @@ public:
 	
 	void	signForm(Form &_form);
 	void	executeForm(Form const &_form);
+
 	Bureaucrat & operator = (Bureaucrat &_bureaucrat);
 	
 

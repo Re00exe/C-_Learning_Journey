@@ -4,10 +4,10 @@
 int main()
 {
 	Bureaucrat	Yaaso("Yaaso", 1);
-	
 	try {
+	
 		std::cout << Yaaso << std::endl;
-		Yaaso.ReGrade();
+	//	Yaaso.ReGrade();
 	//	Yaaso.DeGrade();
 	}
 	catch(const std::exception& exc) {

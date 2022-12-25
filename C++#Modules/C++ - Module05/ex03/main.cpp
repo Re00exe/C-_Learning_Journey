@@ -3,6 +3,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -14,22 +15,12 @@ int main()
 	// 	paper.execute(ekko);
 	// }
 	
-	// {
-	// 	Bureaucrat Master_Yi("Master_Yi", 75);
-	// 	ShrubberyCreationForm paper("RedPaper");
-		
-	// 	Master_Yi.signForm(paper);
-	// 	paper.execute(Master_Yi);	
-	// }
-	
 	{
-		Bureaucrat Akali("Akali", 1);
-		RobotomyRequestForm paper("GreenPaper");
-		
-		Akali.signForm(paper);
-		Akali.executeForm(paper);
-		//paper.execute(Akali);	
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		delete rrf;
 	}
-	
+
 	return (0);
 }

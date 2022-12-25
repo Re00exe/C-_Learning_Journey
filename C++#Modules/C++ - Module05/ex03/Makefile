@@ -6,12 +6,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = Bureaucrat
+NAME = Bureaucrat0.2
 
 
-SRCS = main.cpp Bureaucrat.cpp
-
-HEADERS = Bureaucrat.hpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) $(SRCS) -o $(NAME)
