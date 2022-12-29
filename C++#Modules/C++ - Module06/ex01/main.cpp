@@ -13,16 +13,15 @@ Data *deserialize(uintptr_t raw)
 
 
 int main(void){
-	Data *data = new Data;
+	Data *_int = new Data;
 
-	data->_raw = 1337;
+	_int->_raw = 1337;
 	
-	std::cout << "Data->_raw = " << data->_raw << std::endl;
-	uintptr_t uin = serialize(data);
-	
-	Data *data2 = deserialize(uin);
+	std::cout << "Data->_raw = " << _int->_raw << std::endl;
+	uintptr_t uptr = serialize(_int);
 
-	std::cout << "Data2->_raw = " << data2->_raw << std::endl;
+	Data *data = deserialize(uptr);
 	
-	std::cout << (data == data2) << std::endl;
+	std::cout << "Data1->_raw = " << data->_raw << std::endl;
+	
 }
