@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = serialization
+NAME = IdeType
 
 SRCS = main.cpp
 
