@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mostapha <mostapha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: midfath <midfath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 16:18:01 by nelidris          #+#    #+#             */
-/*   Updated: 2022/12/30 19:49:26 by mostapha         ###   ########.fr       */
+/*   Updated: 2022/12/31 00:08:02 by midfath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Array
 		int 	_len;
 	public:
 		Array(){
-			_arr = 0; _len = 0;
+			_arr=0; _len = 0;
 		}
 		
 		Array(unsigned int n){
@@ -63,19 +63,17 @@ class Array
 			if (_arr) delete[] _arr;
 		}
 
-		int	size() const{
-			return (_len);
-		}
-		
 		T&	operator[](int idx) const {
 			if (idx < 0 || idx > _len - 1)
-				throw (BasIndexException());
+				throw (BadIndexException());
 			return (_arr[idx]);
 		}
 		
-		class BasIndexException: public std::exception{
+		class BadIndexException: public std::exception{
 			const char* what() const throw() { return ("Wrong Index !!!"); }
 		};
+		
+		int	size() const;
 };
 
 #endif

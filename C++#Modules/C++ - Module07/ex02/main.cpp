@@ -1,12 +1,18 @@
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
+#include "Array.tpp"
 
 #define MAX_VAL 750
 int main(int, char**)
 {
+	Array<int> ok(3);
+//	std::cout << ok[0] << std::endl;
+//	std::cout << ok[1] << std::endl;
+//	std::cout << ok[2] << std::endl;
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
+	// std:: cout << numbers.size() << std::endl;
     for (int i = 0; i < MAX_VAL; i++)
     {
         const int value = rand();
@@ -48,6 +54,7 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
+    delete [] mirror;
+	
     return 0;
 }
