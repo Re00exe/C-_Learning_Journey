@@ -9,7 +9,7 @@ CPP_VERSION = -std=c++98
 NAME = mutantstack
 
 
-SRCS = main.cpp MutantStack.cpp
+SRCS = main.cpp
 
 HEADERS = MutantStack.hpp
 

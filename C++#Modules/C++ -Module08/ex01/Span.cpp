@@ -66,6 +66,9 @@ int	Span::longestSpan(){
         max_span = std::max(max_span, val - min_val);
         max_span = std::max(max_span, max_val - val);
     }
+    if (max_span == INT_MIN)
+        throw (std::overflow_error("#NO Longest span have been found !"));
+
     return max_span;
 }
 
