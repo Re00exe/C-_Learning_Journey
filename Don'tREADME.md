@@ -1,17 +1,5 @@
 # AutoGen
 
-
-**An automation script for creating classes and exercises in canonical form for `Cpp_pool`**
-
-
-
-**Instalation**
-
-- Clone this repo to `~/AutoGen/`
-
-```shell
-git clone git@github.com:okadir/AutoGen.git ~/AutoGen/
-```
 - add these folowing lines to your `.zshrc` file
 
 ```shell
