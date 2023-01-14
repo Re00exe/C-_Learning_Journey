@@ -6,7 +6,6 @@
 alias exer="bash $HOME/AutoGen/exer.sh"
 alias class="bash $HOME/AutoGen/class.sh"
 ```
-- Close current terminal and open new one.  Now look at Usage section
 
 **Usage**
 
