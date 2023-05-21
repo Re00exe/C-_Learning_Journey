@@ -24,9 +24,7 @@ BitcoinExchange::BitcoinExchange() {
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &a) { data = a.data; }
 
 // destructor
-BitcoinExchange::~BitcoinExchange() {
-
-}
+BitcoinExchange::~BitcoinExchange() {}
 
 // assignment operator
 BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &a) {
@@ -36,9 +34,24 @@ BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &a) {
   return *this;
 }
 
-void BitcoinExchange::output_data() {
+void BitcoinExchange::output_data(std::string date, std::string value) {
+
+  double btc_value;
+
+  btc_value = std::stod(value);
   for (std::map<std::string, double>::const_iterator it = this->data.begin();
-       it != this->data.end(); ++it) {
-    std::cout << it->first << ": " << it->second << std::endl;
+       it != this->data.end(); it++) {
+    if (it->first == date) {
+      std::cout << it->first << ": "
+                << "=>" << btc_value << " = " << std::fixed
+                << std::setprecision(2) << btc_value * it->second << std::endl;
+      break;
+    } else {
+      it = this->data.lower_bound(date);
+      std::cout << date << ": "
+                << "=>" << btc_value << " = " << std::fixed
+                << std::setprecision(2) << btc_value * it->second << std::endl;
+      break;
+    }
   }
 }

@@ -15,7 +15,7 @@ public:
   ~BitcoinExchange();
   BitcoinExchange &operator=(const BitcoinExchange &a);
 
-  void output_data();
+  void output_data(std::string date, std::string value);
 };
 
 #endif
