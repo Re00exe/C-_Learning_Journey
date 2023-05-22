@@ -71,9 +71,9 @@ int main(int argc, char *argv[]) {
       } else {
         std::cout << "#Error: invalid format on file: line " << str_line
                   << std::endl;
-        in_file.close();
       }
     }
+    in_file.close();
   } else
     std::cout << "#Error : No File " << std::endl;
   return 0;

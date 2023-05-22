@@ -15,8 +15,7 @@ public:
   ~RPN();
   RPN &operator=(const RPN &a);
 
-  void ParseToStack(std::string _input);
-  int  RpnCalc();
+  int ParseToStack(std::string _input);
+  int  RpnCalc(int num1, int num2, char _operator);
 };
-
 #endif

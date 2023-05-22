@@ -6,12 +6,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-NAME = RPN
+NAME = PmergeMe
 
 
-SRCS = main.cpp RPN.cpp
+SRCS = main.cpp PmergeMe.cpp
 
-HEADERS = RPN.hpp
+HEADERS = PmergeMe.hpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(CPP_VERSION) $(SRCS) -o $(NAME)
