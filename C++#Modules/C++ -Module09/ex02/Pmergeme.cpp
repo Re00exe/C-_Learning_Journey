@@ -1,22 +1,22 @@
-#include "PmergeMe.hpp"
+#include "Pmergeme.hpp"
+#include <algorithm>
+#include <sys/time.h>
 
 /*--------------------------------------------------------*/
-PmergeMe::PmergeMe (){
-    // your implementation here
+PmergeMe::PmergeMe() {
 }
 
 /*--------------------------------------------------------*/
-PmergeMe::PmergeMe (const PmergeMe &a){
-    // your implementation here
+PmergeMe::PmergeMe(const PmergeMe &obj) {
+  this->operator=(obj);
 }
 
 /*--------------------------------------------------------*/
-PmergeMe::~PmergeMe (){
-    // your implementation here
+PmergeMe::~PmergeMe() {
 }
 
 /*--------------------------------------------------------*/
-PmergeMe & PmergeMe::operator = (const PmergeMe &a){
-    // your implementation here
+PmergeMe &PmergeMe::operator=(const PmergeMe &a) {
+  (void)a;
+  return (*this);
 }
-
