@@ -86,7 +86,7 @@ int main(int ac, char* av[]) {
     }
   }
   std::vector<unsigned int> vec_a, vec_b;
-  proccessValues(ac, vec, vec_a, vec_b, 'd');
+  proccessValues(ac, vec, vec_a, vec_b, 'v');
 
   std::deque<std::pair<unsigned int, unsigned int> > dec;
   for (int i = 1; i < ac; i += 2) {
@@ -96,7 +96,7 @@ int main(int ac, char* av[]) {
     }
   }
   std::deque<unsigned int> dec_a, dec_b;
-  proccessValues(ac, dec, dec_a, dec_b, 'v');
+  proccessValues(ac, dec, dec_a, dec_b, 'd');
 
   return 0;
 }
